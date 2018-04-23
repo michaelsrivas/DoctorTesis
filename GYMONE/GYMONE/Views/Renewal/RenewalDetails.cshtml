@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "UploadDocument";
+}
+
+<script src="~/Scripts/jquery-1.11.1.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/bootstrap/js/bootstrap.min.js"></script>
+<link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Scripts/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+        });
+    </script>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+    })
+</script>
+
+
+
+<script type="text/javascript">
+    function validarExtension() {
+        var ext = $('#Archivo').val().split('.').pop().toLowerCase();
+        if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert('invalid extension!');
+        }
+    }
+</script>
+
+<div class="container">
+    <div class="logo col-sm-12 text-center col-md-12 ">
+        <img alt="" src="~/Images/UAO.png" />
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+        <div class="panel">
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input id="Archivo" type="file" accept=".doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx, .jpg" />
+                    </div>
+                    <div class="col-md-3">
+                        <input id="Upload" type="button" value="Upload" class="btn btn-success" onclick="validarExtension();/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
